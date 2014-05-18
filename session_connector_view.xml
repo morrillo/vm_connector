@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+    <record model="ir.ui.view" id="view_session_connector_search">
+        <field name="name">session.connector.search</field>
+        <field name="model">session.connector</field>
+        <field name="arch" type="xml">
+            <search string="E-Commerce Server">
+                <field name="host" string="Session Connector" filter_domain="[('host','ilike',self)]"/>
+            </search>
+        </field> 
+    </record>
+
+    <record model="ir.actions.act_window" id="action_session_connector">
+        <field name="name">Session Connector</field>
+        <field name="res_model">session.connector</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_session_connector_search"/> 
+    </record>
+
+    <menuitem name="Sesiones" parent="base.menu_config" id="menu_sesion_conector" action="action_session_connector" />
+
+
+    </data>
+</openerp>
