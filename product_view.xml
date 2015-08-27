@@ -7,7 +7,7 @@
             <field name="model">product.product</field>
             <field name="inherit_id" ref="product.product_normal_form_view"/>
             <field name="arch" type="xml">
-		<field name="list_price" position="after">
+		<field name="lst_price" position="after">
 			<group name="virtuemart">
 		            <field name="virtuemart_product_id" string="ID VirtueMart"/>
 			</group>
